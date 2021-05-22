@@ -4,10 +4,15 @@ body {
 header {
   background-color: #00121A;
   padding: 15px;
+  position: fixed;
+  width: 99%;
+  z-index: 20000;
+  
 }
 header ul {
   float: right;
   color: white;
+  
 }
 header li {
   display: inline-block;
@@ -15,34 +20,31 @@ header li {
   color: #F2CBC6;
   font-family: century gothic;
   cursor: pointer;
-  
+
 }
 header p {
   display: inline-block;
 }
 .heroImg {
   padding: 100px 15px;
-  background-image: url(../images/stars.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
- 
-  
+  background-image: url(../images/stars.jpg); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  background-position: center; 
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 .content {
-  max-width: 700px;
+  max-width: 600px;
   padding: 50px;
   text-align: center;
   z-index: 1000;
-  position: relative;
-  top: 50px;
+  top: 80px;
   color: #F2CBC6;
   font-family: 'Century Gothic';
   margin-left: auto;  
   margin-right: auto;
-  
 }
 
 
@@ -77,8 +79,19 @@ footer li {
   margin-right: auto;
   width: 75%;
   z-index: -100;
-
 }
+.nintendo {
+background-image: url("../images/switch.png");
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+min-height: 829px;
+margin: 0 auto;
+background-position: center;
+position: relative;
+}
+
+
 /*picture of self*/
 .Alexis {
   border-radius: 100%;
@@ -93,6 +106,9 @@ footer li {
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: absolute;
+  left: 10%;
+  top: 25%;
 }
 .prev:hover {background-color:#FCECFC}
 
@@ -110,6 +126,9 @@ footer li {
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: absolute;
+  right: 10%;
+  bottom: 10%x;
 }
 .next:hover {background-color:#FCECFC}
 
@@ -293,9 +312,17 @@ font-family: century gothic;
 }
 
 /*responsive resize*/
-@media only screen and (max-width: 600px) 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
+
+@media screen and (max-width: 480px) {
+  .nintendo {
+    background-image: url("../images/gameboy.png");
+    background-repeat: no-repeat;
+    background-size: contain ;
+  }
+  .prev {
+    display: none;
+  }
+  .next {
+    display: none;
+  }
 }
